@@ -49,13 +49,12 @@ def take_input():
 
 
 def unique(numbers: list[int]) -> tuple[list[int], list[int]]:
-	"""Vanilla implementation of numpy.unique.
-
-	Presumes the input is sorted.
-	"""
+	"""Vanilla implementation of numpy.unique."""
 
 	if len(numbers) == 0:
 		return [], []
+
+	numbers = sorted(numbers)
 
 	values = [numbers[0]]
 	counts = [1]
